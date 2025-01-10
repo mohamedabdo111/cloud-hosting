@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar/navbar";
-import Footer from "@/components/Footer/footer";
+// import Footer from "@/components/Footer/footer";
 import { Toaster } from "react-hot-toast";
 import { cookies } from "next/headers";
 import { verifyUser } from "@/utils/verifyToken";
@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <Navbar UserData={verify as IUserData}></Navbar>
         {children}
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
         <Toaster />
       </body>
     </html>
