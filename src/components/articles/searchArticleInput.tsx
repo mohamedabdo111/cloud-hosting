@@ -1,30 +1,34 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
-import toast from "react-hot-toast";
+import React, { useEffect, useState } from "react";
 
-const SearchArticleInput = () => {
+const SearchArticleInput = ({ locale }: { locale: string }) => {
+  const time = 1000;
   const [search, setSearch] = useState("");
   const router = useRouter();
+  useEffect(() => {
+    if (search === "") return;
+    const data = setTimeout(() => {
+      router.push(`/${locale}/articles/search?search=${search}`);
+      console.log("search", search);
+    }, time);
 
-  const onSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+    return () => clearTimeout(data);
+  }, [search, router, locale]);
 
-    if (search === "") return toast.error("search is required");
-
-    router.push(`/articles/search?search=${search}`);
-  };
+  const t = useTranslations("Articles");
 
   return (
-    <form onSubmit={onSearch}>
+    <div>
       <input
-        className="border rounded-lg p-2 w-96  h-10 my-4 outline-none text-black "
+        className="border rounded-lg p-2 w-full  h-10 my-4 outline-none text-black "
         type="text"
-        placeholder="Search"
+        placeholder={t("search")}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
-    </form>
+    </div>
   );
 };
 

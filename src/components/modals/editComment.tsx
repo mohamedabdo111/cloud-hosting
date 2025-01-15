@@ -1,4 +1,4 @@
-import { EditCommentApi } from "@/app/apiCalls/commentApis";
+import { EditCommentApi } from "@/app/[locale]/apiCalls/commentApis";
 import { ICommens } from "@/utils/dtos";
 import { AxiosError } from "axios";
 import { useRouter } from "next/navigation";

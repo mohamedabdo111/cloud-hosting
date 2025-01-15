@@ -1,0 +1,54 @@
+{
+  "HomePage": {
+    "header": "Cloud Hosting",
+    "sub_header": "Simple and easy way to host your website",
+    "des_one": "Easy to use control panel",
+    "des_two": "Secure Hosting",
+    "des_three": "website maintanance",
+    "sec_header": "Choose your web hosting plan",
+    "section_one": "Premium",
+    "section_one_title": "5$ per month",
+    "section_one_descount": "10% off",
+    "section_one_feature": "100 website",
+    "section_two": "Premium",
+    "section_two_title": "4$ per month",
+    "section_two_descount": "10% off",
+    "section_two_feature": "100 website",
+    "section_three": "free",
+    "section_three_title": "0$ per month",
+    "section_three_descount": "100% off",
+    "section_three_feature": "100 website",
+    "Top_Feature": "Top Feature",
+    "buy_now": "Buy Now"
+  },
+  "login": {
+    "title": "login",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Login",
+    "createNewAccount": "Create new account"
+  },
+  "register": {
+    "title": "Create new account",
+    "email": "Email",
+    "password": "Password",
+    "username": "Username",
+    "submit": "Register",
+    "requierd_Error": "email and password is required",
+    "success": "register successfully"
+  },
+  "NavBar": {
+    "home": "Home",
+    "about": "About",
+    "article": "articles",
+    "register_btn": "Register",
+    "login_btn": "Login",
+    "logout_btn": "Logout",
+    "Admin_dashboard": "Admin Dashboard"
+  },
+  "Articles": {
+    "title": "Articles",
+    "search": "Search",
+    "learn_more": "Learn More"
+  }
+}

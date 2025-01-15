@@ -1,4 +1,4 @@
-import { deleteArticleApi } from "@/app/apiCalls/articleApis";
+import { deleteArticleApi } from "@/app/[locale]/apiCalls/articleApis";
 import { User } from "@/utils/types";
 import prisma from "@/utils/db";
 import { verifyToken } from "@/utils/verifyToken";

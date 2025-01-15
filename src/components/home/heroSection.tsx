@@ -2,25 +2,24 @@ import React from "react";
 import Image from "next/image";
 import { IoMdCheckmark } from "react-icons/io";
 import cloudImage from "../../../public/cloud-hosting.png";
-
-const HeroSectionTitle = [
-  { title: "Easy to use control panel" },
-  {
-    title: "Secure Hosting",
-  },
-  {
-    title: "website maintanance",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const HeroSection = () => {
+  const t = useTranslations("HomePage");
+  const HeroSectionTitle = [
+    { title: t("des_one") },
+    {
+      title: t("des_two"),
+    },
+    {
+      title: t("des_three"),
+    },
+  ];
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 p-9 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 py-9 ">
       <div className=" col-span-2 md:col-span-1 flex flex-col justify-center items-center">
-        <h1 className="text-5xl font-semibold">Cloud Hosting</h1>
-        <h5 className="text-2xl mb-4">
-          Simple and easy way to host your website
-        </h5>
+        <h1 className="text-5xl font-semibold">{t("header")}</h1>
+        <h5 className="text-2xl mb-4">{t("sub_header")}</h5>
 
         {HeroSectionTitle.map((title, index) => (
           <p

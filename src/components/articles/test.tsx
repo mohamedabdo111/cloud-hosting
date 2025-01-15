@@ -1,5 +1,5 @@
 "use client";
-import { DeleteCommentApi } from "@/app/apiCalls/commentApis";
+import { DeleteCommentApi } from "@/app/[locale]/apiCalls/commentApis";
 import { ICommens } from "@/utils/dtos";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";

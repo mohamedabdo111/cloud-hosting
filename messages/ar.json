@@ -1,0 +1,54 @@
+{
+  "HomePage": {
+    "header": "الاستضافة السحابية",
+    "sub_header": "طريقة بسيطة وسهلة لاستضافة موقعك الإلكتروني",
+    "des_one": "لوحة تحكم سهلة الاستخدام",
+    "des_two": "استضافة آمنة",
+    "des_three": "صيانة الموقع",
+    "sec_header": "اختر خطة استضافة الويب الخاصة بك",
+    "section_one": "المميزة",
+    "section_one_title": "5$ شهرياً",
+    "section_one_descount": "خصم 10%",
+    "section_one_feature": "100 موقع إلكتروني",
+    "section_two": "المميزة",
+    "section_two_title": "4$ شهرياً",
+    "section_two_descount": "خصم 10%",
+    "section_two_feature": "100 موقع إلكتروني",
+    "section_three": "مجانية",
+    "section_three_title": "0$ شهرياً",
+    "section_three_descount": "خصم 100%",
+    "section_three_feature": "100 موقع إلكتروني",
+    "Top_Feature": "أفضل ميزة",
+    "buy_now": "اشترِ الآن"
+  },
+  "login": {
+    "title": "تسجيل الدخول",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "submit": "تسجيل الدخول",
+    "createNewAccount": "إنشاء حساب جديد"
+  },
+  "register": {
+    "title": "إنشاء حساب جديد",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "username": "اسم المستخدم",
+    "submit": "التسجيل",
+    "requierd_Error": "البريد الإلكتروني وكلمة المرور مطلوبان",
+    "success": "تم التسجيل بنجاح"
+  },
+  "NavBar": {
+    "home": "الصفحة الرئيسية",
+    "about": "عنا",
+    "article": "مقالات",
+    "register_btn": "انشاء حساب جديد",
+    "login_btn": "تسجيل الدخول",
+    "logout_btn": "تسجيل الخروج",
+    "Admin_dashboard": "لوحة تحكم المدير"
+  },
+  "Articles": {
+    "title": "المقالات",
+    "search": "بحث",
+    "learn_more": "اعرف المزيد"
+  }
+}

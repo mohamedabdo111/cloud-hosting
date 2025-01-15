@@ -1,13 +1,15 @@
 // i make this pagination because i can't use another pagi i made bacaues the other one is client side  , so i made this one to use it in admin page
 "use client";
+import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
 import React from "react";
 import ReactPaginate from "react-paginate";
 
 const AdminPaginationComponent = ({ pageCount }: { pageCount: number }) => {
+  const locale = useLocale();
   const router = useRouter();
   const handlePageChange = (data: { selected: number }) => {
-    router.push(`/admin/article-table?page=${data.selected + 1}`);
+    router.push(`/${locale}/admin/article-table?page=${data.selected + 1}`);
   };
 
   return (
