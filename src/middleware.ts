@@ -7,6 +7,23 @@ const i18nMiddleware = createMiddleware(routing);
 
 // Combined Middleware
 export async function middleware(request: NextRequest) {
+  // Add CORS headers to the response
+  const response = NextResponse.next();
+  response.headers.set("Access-Control-Allow-Origin", "*"); // Adjust '*' to your allowed domains for better security
+  response.headers.set(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
+  response.headers.set(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Authorization"
+  );
+
+  // Handle OPTIONS requests for preflight
+  if (request.method === "OPTIONS") {
+    return new Response(null, { headers: response.headers });
+  }
+
   // Authentication Logic
   const token = request.cookies.get("authToken")?.value as string;
 
@@ -21,7 +38,18 @@ export async function middleware(request: NextRequest) {
   }
 
   // Proceed to the i18n middleware
-  return i18nMiddleware(request);
+  const i18nResponse = i18nMiddleware(request);
+  i18nResponse.headers.set("Access-Control-Allow-Origin", "*");
+  i18nResponse.headers.set(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
+  i18nResponse.headers.set(
+    "Access-Control-Allow-Headers",
+    "Content-Type, Authorization"
+  );
+
+  return i18nResponse;
 }
 
 // Matcher Configuration
@@ -34,8 +62,3 @@ export const config = {
     "/register", // Register page
   ],
 };
-
-// See "Matching Paths" below to learn more
-// export const config = {
-//   matcher: ["/login", "/register"],
-// };
