@@ -21,7 +21,7 @@ const BtnLocale = () => {
 
   return (
     <button
-      className="py-1 px-2 border rounded-md"
+      className="py-1 px-2 border rounded-md text-[#111827cc] border-[#111827cc] dark:text-white dark:border-white"
       onClick={handleChangeLanguage}
     >
       {locale === "en" ? "العربية" : "English"}

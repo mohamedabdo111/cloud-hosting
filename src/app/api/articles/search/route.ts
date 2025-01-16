@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
       searchWord = await prisma.article.findMany({
         where: {
           title: {
-            startsWith: searchParams,
+            contains: searchParams,
           },
         },
       });

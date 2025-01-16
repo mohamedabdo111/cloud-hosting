@@ -2,7 +2,7 @@
 import { AddCommentApi } from "@/app/[locale]/apiCalls/commentApis";
 import { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import { useState } from "react";
 import toast from "react-hot-toast";
 const AddComment = ({
   articleId,

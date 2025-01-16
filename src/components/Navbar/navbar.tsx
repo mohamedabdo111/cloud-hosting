@@ -11,6 +11,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import BtnLocale from "@/components/btnLocal/btn";
 import { BsFillCloudArrowDownFill } from "react-icons/bs";
+import Buttonssssss from "./switchBtn";
 const Navbar = ({
   UserData,
   locale,
@@ -41,12 +42,14 @@ const Navbar = ({
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              <BsFillCloudArrowDownFill size={45} />
+              <BsFillCloudArrowDownFill
+                size={45}
+                className="text-[#111827cc] dark:text-white"
+              />
             </span>
           </Link>
-
           {!UserData ? (
-            <div className="flex md:order-2 gap-3 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <div className="flex md:order-2 gap-3 space-x-3 md:space-x-0 rtl:space-x-reverse items-center">
               <Link
                 href={`/${locale}/login`}
                 className={`text-white mx-2 ${
@@ -62,6 +65,7 @@ const Navbar = ({
                 {t("register_btn")}
               </Link>
               <BtnLocale></BtnLocale>
+              <Buttonssssss></Buttonssssss>
             </div>
           ) : (
             <div className="flex items-center gap-2 md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -79,6 +83,7 @@ const Navbar = ({
                 {t("logout_btn")}
               </button>
               <BtnLocale></BtnLocale>
+              <Buttonssssss></Buttonssssss>
             </div>
           )}
 
@@ -100,7 +105,7 @@ const Navbar = ({
           <div
             className={`items-center justify-between ${
               isOpen ? `${styles.listStyle}` : `${styles.hideListStyle}`
-            }  w-full md:!flex md:!relative
+            }  w-full md:!flex md:!relative !bg-gray-300 md:!bg-transparent text-[#111827cc] dark:text-white dark:!bg-[#111827cc]
              md:!w-auto md:order-1`}
             id="navbar-sticky"
           >
@@ -110,7 +115,7 @@ const Navbar = ({
                   href="/"
                   className={` block py-2 px-3 ${
                     pathName === `/${locale}` && "text-blue-700"
-                  } hover:bg-blue-950 rounded md:bg-transparent `}
+                  } hover:bg-gray-400 dark:hover:bg-blue-950 rounded md:bg-transparent `}
                   aria-current="page"
                 >
                   {`${t("home")}`}
@@ -121,7 +126,7 @@ const Navbar = ({
                   href={`/${locale}/articles`}
                   className={` block py-2 px-3 ${
                     pathName === `/${locale}/articles` && "text-blue-700"
-                  } hover:bg-blue-950 rounded md:bg-transparent `}
+                  } hover:bg-gray-400 dark:hover:bg-blue-950 rounded md:bg-transparent `}
                 >
                   {`${t("article")}`}
                 </Link>
@@ -131,7 +136,7 @@ const Navbar = ({
                   href={`/${locale}/about`}
                   className={` block py-2 px-3 ${
                     pathName === `/${locale}/about` && "text-blue-700"
-                  } hover:bg-blue-950 rounded md:bg-transparent `}
+                  } hover:bg-gray-400 dark:hover:bg-blue-950 rounded md:bg-transparent `}
                 >
                   {`${t("about")}`}
                 </Link>
@@ -142,7 +147,7 @@ const Navbar = ({
                     href={`/${locale}/admin`}
                     className={` block py-2 px-3 ${
                       pathName === `${locale}/admin` ? "bg-blue-700" : ""
-                    } hover:bg-blue-950 rounded md:bg-transparent `}
+                    } hover:bg-gray-400 dark:hover:bg-blue-950 rounded md:bg-transparent `}
                   >
                     {`${t("Admin_dashboard")}`}
                   </Link>

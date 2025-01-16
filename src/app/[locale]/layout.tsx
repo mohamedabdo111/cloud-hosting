@@ -8,6 +8,7 @@ import { cookies } from "next/headers";
 import { verifyUser } from "@/utils/verifyToken";
 import { IUserData } from "@/utils/dtos";
 import { Toaster } from "react-hot-toast";
+import { ThemeProvider } from "next-themes";
 
 export default async function LocaleLayout({
   children,
@@ -27,12 +28,14 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          <Navbar UserData={verify as IUserData} locale={locale}></Navbar>
-          {children}
-          <Toaster />
-        </NextIntlClientProvider>
+      <body className="dark:bg-gray-800 bg-[#efefef]">
+        <ThemeProvider attribute={"class"} defaultTheme="light">
+          <NextIntlClientProvider messages={messages}>
+            <Navbar UserData={verify as IUserData} locale={locale}></Navbar>
+            {children}
+            <Toaster />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

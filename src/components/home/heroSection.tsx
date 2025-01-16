@@ -18,7 +18,9 @@ const HeroSection = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 py-9 ">
       <div className=" col-span-2 md:col-span-1 flex flex-col justify-center items-center">
-        <h1 className="text-5xl font-semibold">{t("header")}</h1>
+        <h1 className="text-5xl font-semibold text-[#111827cc] dark:text-white">
+          {t("header")}
+        </h1>
         <h5 className="text-2xl mb-4">{t("sub_header")}</h5>
 
         {HeroSectionTitle.map((title, index) => (

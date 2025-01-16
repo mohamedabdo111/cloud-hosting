@@ -29,7 +29,7 @@ const WebHeroPlan = () => {
   ];
   return (
     <div>
-      <h1 className="text-5xl font-semibold text-center my-4">
+      <h1 className=" md:text-3xl text-2xl font-semibold text-center my-4 text-[#111827cc] dark:text-white">
         {t("sec_header")}
       </h1>
 
@@ -37,9 +37,9 @@ const WebHeroPlan = () => {
         {plan.map((plan) => (
           <div
             key={plan.id}
-            className="card text-center col-span-1 capitalize bg-cyan-950 p-3 flex flex-col gap-5 justify-center rounded-xl"
+            className="card text-center col-span-1 capitalize bg-gray-300 dark:bg-cyan-950 p-3 flex flex-col gap-5 justify-center rounded-xl"
           >
-            <h1 className="text-4xl text-blue-500 font-semibold">
+            <h1 className="text-4xl  font-semibold  text-[#111827cc] dark:text-blue-500">
               {plan.title}
             </h1>
             <p className="text-2xl font-semibold">{plan.price} </p>
@@ -47,7 +47,7 @@ const WebHeroPlan = () => {
               {plan.off}
             </p>
             <h3 className="text-3xl text-blue-500 ">{t("Top_Feature")}</h3>
-            <p className="flex items-center  justify-center gap-2 text-xl  text-gray-400 mb-2">
+            <p className="flex items-center  justify-center gap-2 text-xl  text-gray-500 mb-2">
               {" "}
               <IoMdCheckmark /> <span>{plan.feature}</span>
             </p>
@@ -63,7 +63,7 @@ const WebHeroPlan = () => {
               {" "}
               <IoMdCheckmark /> <span>{plan.feature}</span>
             </p>
-            <button className=" border px-4 py-2 rounded-xl hover:bg-white hover:text-black duration-300 font-semibold ">
+            <button className=" border px-4 py-2 rounded-xl hover:bg-white hover:text-black duration-300 font-semibold text-[#111827cc] border-[#111827cc] dark:text-white dark:border-white ">
               {t("buy_now")}
             </button>
           </div>

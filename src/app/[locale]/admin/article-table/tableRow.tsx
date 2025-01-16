@@ -40,7 +40,7 @@ const TableRow = ({ article }: { article: Article }) => {
         <td className="px-6 py-4">{article.discription}</td>
         <td className="px-6 py-4 flex gap-3">
           <button
-            className="bg-red-700 p-2 rounded-md block "
+            className="bg-red-700 text text-white p-2 rounded-md block "
             onClick={() => setOpen(true)}
           >
             Delete

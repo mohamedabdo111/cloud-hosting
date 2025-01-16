@@ -18,9 +18,15 @@ const ArtileDetails = async ({ params }: { params: { id: string } }) => {
   return (
     <div className="py-5 container">
       <div className=" border-2 border-gray-400 p-5 rounded-md">
-        <h1 className="font-bold text-3xl mb-2 capitalize">{article.title}</h1>
-        <p className=" mb-5">{new Date(article.createdAt).toDateString()}</p>
-        <div>{article.discription}</div>
+        <h1 className="font-bold text-3xl mb-2 capitalize text-[#111827cc] dark:text-white">
+          {article.title}
+        </h1>
+        <p className=" mb-5 text-[#111827cc] dark:text-white">
+          {new Date(article.createdAt).toDateString()}
+        </p>
+        <div className="text-[#111827cc] dark:text-white">
+          {article.discription}
+        </div>
       </div>
 
       {/* comments */}

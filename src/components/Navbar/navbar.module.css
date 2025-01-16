@@ -3,7 +3,7 @@
   left: 0;
   top: 100%;
   width: 100%;
-  background: #111827;
+  background: #111827cc;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   transition: all 0.5s;
 }
